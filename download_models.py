@@ -10,6 +10,11 @@ parser.add_argument('--path',type=str, default="",
 args = parser.parse_args()
 
 if args.path:
+    model_path = os.path.join(args.path, 'headtrip')
+
+    if not os.path.exists(model_path):
+        os.mkdir(model_path)
+        
     print('Save VGG19 to model folder')
     torch.save(vgg19(weights=VGG19_Weights.IMAGENET1K_V1), os.path.join(args.path, 'headtrip' ,'vgg19.pt'))
 

@@ -22,7 +22,7 @@ def load_imgnet_classes():
 
     """
     current_dir = os.getcwd()
-    relative_path = os.path.join("extensions","Headtrip-extension","scripts")
+    relative_path = os.path.join("extensions","HeadTrip-Extension","scripts")
     imgnet_path = os.path.join(current_dir, relative_path, "imageNet_classes.json")
     try:
         with open(imgnet_path, 'r') as openfile:
